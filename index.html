@@ -1,10 +1,41 @@
 <html>
 <head>
-<title>
-    
-</title>
+    <title>CodeVision</title>
+    <script src="js/basic_functions.js"></script>
+    <script src="js/Group.js"></script>
+    <script src="js/json_reader.js"></script>
+    <script src="js/dag_creator.js"></script>    
+    <script src="release/go.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
 </head>
 <body>
-    
+    <div class="header">
+        <h1>CodeVision</h1>
+    </div>
+    <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="help.html">Help</a>
+        <a href="about.html">About</a>
+      </div>
+    <div class="row">
+        <div class="column" style="background-color:rgb(230, 195, 224);">
+            <h2>Algorithm</h2>
+            <p>Enter your algorithm in Javascript</p>
+            <textarea id="algorithm" name="textarea" rows="15" cols="50"></textarea><br>
+            <button onclick="checkRecursive()">Check Algorithm</button>
+            <button onclick="generateCDAG()">Generate C-DAG</button>
+            <button onclick="document.location.reload(true)">Reset</button>
+        </div>
+        <div class="column" style="background-color:rgb(200, 220, 245);">
+            <h2>Computation DAG</h2>
+            <div id="sample">
+			  <div id="myDiagramDiv" style="border: solid 1px black; width:650px; height:400px"></div>
+			</div>
+        </div>
+    <div class="footer" style="position: fixed;">
+        <p>All rights reserved. 2019</p>
+    </div>
 </body>
 </html>
